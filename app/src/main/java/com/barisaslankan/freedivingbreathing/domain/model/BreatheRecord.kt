@@ -6,14 +6,12 @@ import io.realm.kotlin.types.RealmObject
 import io.realm.kotlin.types.annotations.PrimaryKey
 import org.mongodb.kbson.ObjectId
 import java.time.Instant
-import java.util.Date
 
-open class Record : RealmObject {
+class BreatheRecord: RealmObject {
     @PrimaryKey
-    var _id: ObjectId = ObjectId.invoke()
+    var _id: ObjectId = ObjectId()
     var note : String = ""
     var duration : Long = 0L
     var date: RealmInstant = Instant.now().toRealmInstant()
-
-
 }
+
