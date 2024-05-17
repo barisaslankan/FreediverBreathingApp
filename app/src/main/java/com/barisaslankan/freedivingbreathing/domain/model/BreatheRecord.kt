@@ -14,4 +14,3 @@ class BreatheRecord: RealmObject {
     var duration : Long = 0L
     var date: RealmInstant = Instant.now().toRealmInstant()
 }
-

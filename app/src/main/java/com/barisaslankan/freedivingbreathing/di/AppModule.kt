@@ -1,6 +1,8 @@
 package com.barisaslankan.freedivingbreathing.di
 
+import com.barisaslankan.freedivingbreathing.data.repository.RepositoryImpl
 import com.barisaslankan.freedivingbreathing.domain.model.BreatheRecord
+import com.barisaslankan.freedivingbreathing.domain.repository.Repository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,5 +22,11 @@ object AppModule {
                 setOf(BreatheRecord::class)
             )
         )
+    }
+
+    @Singleton
+    @Provides
+    fun provideRepository(realm : Realm) : Repository{
+        return RepositoryImpl(realm = realm)
     }
 }

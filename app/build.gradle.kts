@@ -82,5 +82,5 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:2.9.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
-    implementation("io.realm.kotlin:library-sync:1.11.0")
+    implementation("io.realm.kotlin:library-sync:1.16.0")
 }
